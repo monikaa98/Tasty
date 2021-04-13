@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <a class="nav-link" href="#">TastyFood</a>
+        <div class="navbar-right">
+            <a class="home" href="/home">Начало</a>
+            <a class="logout" href="/user/logout">Изход</a>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="announcement-box-add">
+        <h1 class="announcement-name">Добави обявление</h1>
+        <form th:object="${announcementAddBindingModel}" th:action="@{/announcements/save/(email=${email})}" method="POST">
+            <div class="container-announcement">
+                <label ><b>Заглавие</b></label>
+                <input  autocomplete="off" th:field="*{title}" th:errorclass="bg-danger" type="text" placeholder="Въведете заглавие">
+                <small   th:each = "e : ${#fields.errors('title')}" th:text = "${e}" class="text-danger"></small>
+                <label><b>Описание</b></label>
+                <textarea  th:field="*{description}" th:errorclass="bg-danger" type="text" name="text" autocomplete="off" placeholder="Въведете описание"></textarea>
+                <small   th:each = "e : ${#fields.errors('description')}" th:text = "${e}" class="text-danger"></small>
+                <button class="announcement-add-btn" type="submit">Добави обявление</button>
+            </div>
+        </form>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>

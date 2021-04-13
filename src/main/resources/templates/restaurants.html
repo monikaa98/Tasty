@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <a class="nav-link" href="#">TastyFood</a>
+    <div class="navbar-right" th:object="${isRestaurateur}">
+        <a class="home" href="/home">Начало</a>
+        <a class="restaurant-add" th:if="${isRestaurateur}" th:href="@{/restaurant/add/(town_id=${town_id})}">Добави ресторант</a>
+        <a class="profile"  href="/user/profile">Профил</a>
+        <a class="shopping-bag" th:if="${isUser}" href="/user/shopping-bag">Количка</a>
+        <a class="logout" href="/user/logout">Изход</a>
+    </div>
+</nav>
+</header>
+<main>
+    <div class="restaurant-title-no" th:if="${restaurants.isEmpty()}">Все още няма добавени ресторанти!</div>
+    <div class="restaurant-title-yes" th:if="${!restaurants.isEmpty()}">Ресторанти</div>
+    <div  class="responsive" th:each="r:${restaurants}" th:object="${r}">
+        <div class="gallery">
+            <img th:src="*{pictureUrl}" alt="" width="600" height="400">
+        <div>
+            <a class="desc" th:text="*{name}" th:href="@{/restaurant/restaurants-details/(id=*{id})}" ></a>
+        </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-restaurants">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>

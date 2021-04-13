@@ -1,0 +1,1287 @@
+body {
+    background:   #EEC591;
+}
+.navbar {
+    overflow: hidden;
+    background:  darkred;
+}
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navbar a:hover {
+    background-color: palevioletred;
+    color: black;
+}
+.navbar a.nav-link {
+    color: white;
+}
+.navbar-right {
+    float: right;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+#index {
+    background: #EEC591;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+.background-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.background-container > p {
+    color: darkred;
+    font-size: 50px;
+    text-align: left;
+    padding: 50px;
+    width: 100px;
+    height: 100px;
+}
+.background-container a {
+    display: inline-block;
+    color: #212121;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 20px;
+    margin: 50px 20px;
+    transition: transform 0.3s;
+}
+.background-container h1{
+    color: darkred;
+    text-decoration: none;
+    font-family: Copperplate, Papyrus, fantasy;
+    padding: 10px 25px;
+    font-size: 50px;
+    margin: 50px 20px;
+    transition: transform 0.3s;
+}
+.background-container a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background: darkred;
+    padding: 10px 25px;
+    font-size: 30px;
+    margin: 50px 50px;
+    transition: transform 0.3s;
+}
+.background-container a:hover {
+    transform: scale(1.1);
+}
+.login-box{
+    color: darkred;
+    top: 50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 70px 30px;
+}
+.login-name{
+    margin:0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+    color:darkred;
+}
+.login-box input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.login-box input[type=email]:focus ,.login-box input[type=password]:focus {
+    outline-color: #CD2626;
+}
+button {
+    background-color: #CD2626;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.login-box button:focus{
+    outline-color: #CD2626;
+}
+.container-login {
+    padding: 16px;
+}
+.register-box{
+    color: darkred;
+    top: 56.5%;
+    left: 50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 70px 30px;
+}
+.register-name{
+    margin:0;
+    position: relative; top: 15px;
+    text-align: center;
+    font-size: 30px;
+    color:darkred;
+}
+.register-box input[type=email], input[type=password], input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.select-register{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+}
+.register-box input[type=email]:focus,.register-box input[type=password]:focus,
+.register-box input[type=text]:focus, .select-register:focus{
+    outline-color: #CD2626;
+}
+select:required:invalid {
+    color: gray;
+}
+.register-button {
+    background-color: #CD2626;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.register-button:hover {
+    opacity: 0.8;
+}
+.register-button:focus{
+    outline-color: #CD2626;
+}
+.container-register {
+    padding: 16px;
+}
+.footer-register{
+    padding-top: 750px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+.add-town-box{
+    color: darkred;
+    top: 50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 70px 30px;
+}
+.town-name{
+    margin:0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+    color:darkred;
+}
+.add-town-box input[type=text] ,input[type=file]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.add-town-box input[type=file]{
+    outline: none;
+    border: none
+}
+.add-town-box input[type=text]:focus{
+    outline-color: #CD2626;
+}
+.town-button {
+    background-color: #CD2626;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.town-button:hover {
+    opacity: 0.8;
+}
+.town-button:focus{
+    outline-color: #CD2626;
+}
+.container-town {
+    padding: 16px;
+}
+.name-city{
+    text-align: left ;
+    font-size: 20px;
+    font-family: arial, fantasy;
+    color:black;
+}
+.column-town {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+.name-town {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    color: white;
+    font-weight: 700;
+    font-family: arial, fantasy;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+}
+.column-town {
+    float: left;
+    width: 20%;
+    padding: 5px;
+}
+.name-city-no{
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
+    color:darkred;
+    font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+}
+.name-city-yes{
+    font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+    text-align: left ;
+    padding: 8px;
+    font-size: 20px;
+    color:darkred;
+}
+.row-town::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+img{ max-width:100%;}
+.imgTown{
+    width: 150%;
+    height: 300px;
+    padding: 5px;
+    text-decoration: none;
+}
+img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.footer-home{
+    padding-top: 550px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+@media screen and (max-width: 500px) {
+    .column-town {
+        width: 100%;
+    }
+}
+.name-restaurant {
+    text-align: center;
+    color: darkred;
+    text-decoration: none;
+    font-family: arial, fantasy;
+    font-size: 30px;
+}
+.restaurant-title-no{
+    text-align: center;
+    color: darkred;
+    text-decoration: none;
+    font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+    font-size: 30px;
+    padding: 50px;
+}
+.restaurant-title-yes{
+    text-align: left;
+    color: darkred;
+    text-decoration: none;
+    font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+    font-size: 20px;
+    padding: 6px;
+}
+div.gallery {
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+div.gallery:hover {
+    border: 1px solid darkred;
+}
+div.gallery img {
+    width: 100%;
+    height: 300px;
+    padding: 5px;
+    text-decoration: none;
+}
+div.desc {
+    padding: 15px;
+    text-align: left;
+    color: darkred;
+    text-decoration: none;
+}
+.desc{
+    text-decoration: none;
+    color: darkred;
+    font-family: arial, fantasy;
+    font-size: 15px;
+}
+* {
+    box-sizing: border-box;
+}
+.responsive {
+    padding:  0 5px;
+    float: left;
+    width: 24.99999%;
+    text-decoration: none;
+}
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.restaurant-box-add{
+    color: darkred;
+    top: 50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 70px 30px;
+}
+.restaurant-name-add{
+    margin:0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+    color:darkred;
+}
+.restaurant-box-add input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.restaurant-box-add input[type=file] {
+    outline: none;
+    border: none
+
+}
+.restaurant-box-add input[type=text]:focus{
+    outline-color: #CD2626;
+}
+.restaurant-add-button {
+    background-color: #CD2626;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.restaurant-add-button:hover {
+    opacity: 0.8;
+}
+.restaurant-add-button:focus{
+    outline-color: #CD2626;
+}
+.container-restaurant {
+    padding: 16px;
+}
+div.polaroid-restaurant-d {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32%;
+    height: 30%;
+}
+div.container-restaurant-d {
+    text-align: center;
+    padding: 10px 30px;
+    width: 80px;
+    height: 80px;
+}
+.imgRestaurant{
+    width: 300px;
+    height: 300px;
+}
+.name-restaurant-d{
+    font-size: 17px;
+    color: darkred;
+}
+.name-restaurant-de{
+    padding: 10px 20px;
+    width: 400px;
+    height: 10px;
+    position: absolute;
+}
+.footer-restaurants{
+    padding-top: 1000px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+.position-menu{
+    position: relative;
+    top: 1px;
+}
+.position-add-review{
+    position: relative;
+    top: 10px;
+}
+.position-view-review {
+    position: relative;
+    top: 17px;
+}
+.menu-details-restaurant {
+    font-size: 36px;
+    color: darkred;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px
+}
+.menu-details-restaurant:after {
+    content: "";
+    position: absolute;
+    width: 22.5%;
+    left: 38.5%;
+    height: 45px;
+    border-bottom: 1px solid darkred;
+}
+.menu-but {
+    background-color: firebrick;
+    color: white;
+    padding: 13px;
+    margin: 10px 0;
+    border: none;
+    width: 30%;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+}
+.menu-but:hover {
+    background-color: darkred;
+}
+.text-center-menu {
+    text-align: center;
+}
+.add-review {
+    color: darkred;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+.view-review {
+    color: darkred;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+.footer-view-reviews{
+    padding-top: 650px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+.menu-btn {
+    color: darkred;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+.title-menu {
+    font-size: 36px;
+    color: darkred;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+    font-family: arial, fantasy;
+}
+.title-menu:after {
+    content: "";
+    position: absolute;
+    width: 22.5%;
+    left: 38.5%;
+    height: 45px;
+    border-bottom: 1px solid darkred;
+}
+.menu-title-no{
+    font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+    font-size: 30px;
+    text-align: center;
+    color: darkred;
+}
+.name-menu{
+    font-family: arial, fantasy;
+    font-size: 20px;
+}
+* {
+    box-sizing: border-box;
+}
+.btn-menu{
+    text-decoration: none;
+    color: white;
+}
+.link-menu{
+    text-decoration: none;
+    color: white;
+}
+.column-menu {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+}
+.row-menu {margin: 0 -5px;}
+.row-menu:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.mySticky-menu {
+    text-decoration: none;
+    color:darkred;
+    font-family: arial, fantasy;
+    position: relative;
+    left: 8px;
+}
+.card-img-menu {
+    width: 192px;
+    height: 132px;
+    object-fit: contain
+}
+.card-img-menu:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.card-menu {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.btn-menu {
+    background-color: darkred;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 10px;
+    font-weight: 800
+}
+
+.btn-menu:hover {
+    background-color: red;
+}
+.footer-meals{
+    padding-top: 650px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+@media screen and (max-width: 600px) {
+    .column-menu {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+.add-meal-box{
+    color: darkred;
+    top: 62%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 70px 30px;
+}
+.meal-name{
+    margin:0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+    color:darkred;
+}
+.add-meal-box input[type=text],input[type=number],input[type=file],textarea[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.add-meal-box input[type=file]{
+    outline: none;
+    border: none
+}
+.add-meal-box .select-meal-add{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.add-meal-box input[type=text]:focus, .add-meal-box input[type=number]:focus, .select-meal-add:focus,
+.add-meal-box textarea[type=text]:focus {
+    outline-color: #CD2626;
+}
+.add-meal-button {
+    background-color: #CD2626;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.add-meal-button:hover {
+    opacity: 0.8;
+}
+.add-meal-button:focus{
+    outline-color: #CD2626;
+}
+.footer-add-meal{
+    padding-top: 850px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+.container-meal {
+    padding: 16px;
+}
+.shopping-bag-title {
+    padding: 16px;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Cursive, Lucida Handwriting;
+    color: darkred;
+}
+.shopping-bag-null {
+    padding: 40px;
+    color: darkred;
+    font-family: Cursive, Lucida Handwriting;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.shopping-bag-img{
+    position: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+* {
+    box-sizing: border-box;
+}
+.img-shopping-bag {
+    width: 80px;
+    height: 80px
+}
+.col-25-shopping-bag {
+    -ms-flex: 25%;
+    flex: 25%;
+}
+.col-25-shopping-bag {
+    padding: 0 16px;
+}
+.close-shopping-bag {
+    font-size: 0.7rem;
+    float: right;
+}
+.container-shopping-bag {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+.btn-shopping-bag {
+    background-color: firebrick;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 17px;
+}
+.btn-shopping-bag:hover {
+    background-color: darkred;
+}
+.hr-shopping-bag {
+    border: 1px solid lightgrey;
+}
+span.price-shopping-bag {
+    float: right;
+    color: grey;
+}
+input.quantity-shopping-bag{
+    float: right;
+    color: grey;
+}
+.footer-shopping-bag{
+    padding-top: 450px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+@media (max-width: 800px) {
+    .col-25-shopping-bag {
+        margin-bottom: 20px;
+    }
+}
+.row-address {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    padding: 10px;
+}
+.col-50-address {
+    -ms-flex: 50%;
+    flex: 50%;
+}
+.col-75-address {
+    -ms-flex: 75%;
+    flex: 75%;
+}
+.col-50-address,
+.col-75-address {
+    padding: 0 16px;
+}
+.container-address {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+input[type=text],input[type=number] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+.btn-address {
+    background-color: #CD2626;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.btn-address:hover {
+    background-color: darkred;
+}
+.btn-address:focus,.btn-shopping-bag-adr:focus{
+    outline-color: #CD2626;
+}
+.btn-shopping-bag-adr{
+    background-color: darkred;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.btn-shopping-bag-adr:hover {
+    background-color: #CD2626;
+}
+.address-add-small{
+    color: red;
+}
+@media (max-width: 800px) {
+    .row-address {
+        flex-direction: column-reverse;
+    }
+    .col-50-address,
+    .col-75-address {
+        margin-bottom: 20px;
+    }
+}
+.successful-order-name{
+    font-size:30px;
+    text-align: center;
+    font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+    color: darkred;
+    padding: 50px;
+}
+.view-orders {
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: darkred;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.view-orders:hover {
+    background-color: darkred;
+    color: white;
+}
+.orders-no{
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
+    font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+    color: darkred;
+}
+.orders-name{
+    font-family: arial, fantasy;
+    font-size: 20px;
+}
+.footer-orders{
+    padding-top: 650px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid darkred;
+    background: white;
+}
+th, td {
+    border-bottom: 1px solid darkred;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+.text-danger{
+    position: relative; top: -10px;
+    color: red;
+}
+.text-danger-password{
+    position: relative; top: 1px;
+    color: red;
+}
+.viewReview{
+    width:320px;
+    height:1000px;
+    color: darkred;
+    top: 50%;
+    right:60%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 250px 30px;
+    margin-left: 600px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.viewReview:after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    left: 30%;
+    height: 45px;
+    border-bottom: 1px solid darkred;
+}
+.review{
+    color:darkred;
+    text-align: center;
+}
+.review-email{
+    color:darkred;
+}
+.review-text{
+    color:black;
+}
+.review-view {
+    background-color: #f2f2f2;
+    padding: 3px 18px 13px 18px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+.checked {
+    color: orange;
+}
+.review-assessment{
+    float: right;
+    color: grey;
+    padding-right: 10px;
+    position: relative;
+    top: -30px;
+}
+.inName-user {
+    color: darkred;
+    text-align: center;
+}
+.user-information {
+    border-collapse: collapse;
+    border: 1px solid #EEC591;
+    background-color: #EEC591;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.info-user {
+    text-align: left;
+    padding: 16px;
+    font-weight: bold;
+}
+.information-user{
+    padding-left: 550px;
+    font-weight: normal;
+}
+.user-img{
+    position: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.username-profile{
+    text-decoration: none;
+    text-align: center;
+    font-size: 26px;
+    color: darkred;
+}
+.username-profile-p{
+    text-decoration: none;
+    text-align: center;
+    font-size: 26px;
+    color: darkred;
+    font-weight: bolder;
+}
+.person-information {
+    position: absolute;
+    text-decoration: none;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #CD2626;
+    color: white;
+    font-size: 16px;
+    padding: 16px 121px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.person-information:hover {
+    background-color: darkred;
+    color: white;
+}
+.orders-profile {
+    position: absolute;
+    text-decoration: none;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #CD2626;
+    color: white;
+    font-size: 16px;
+    padding: 16px 160px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.orders-profile:hover {
+    background-color: darkred;
+    color: white;
+}
+.review-box{
+    color: darkred;
+    top: 50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 70px 30px;
+}
+.review-add-name{
+    margin:0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+    color:darkred;
+}
+.review-box textarea[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.review-box select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.review-box textarea[type=text]:focus ,.review-box select:focus {
+    outline-color: #CD2626;
+}
+.add-review-btn {
+    background-color: #CD2626;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.add-review-btn:hover {
+    opacity: 0.8;
+}
+.add-review-btn:focus{
+    outline-color: #CD2626;
+}
+.container-review-add {
+    padding: 16px;
+}
+.review-add{
+    width:320px;
+    height:1000px;
+    color: darkred;
+    top: 50%;
+    left:45%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 250px 30px;
+    margin-left: 600px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.review-add:after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    left: 30%;
+    height: 45px;
+    border-bottom: 1px solid darkred;
+}
+.announcement-box-add{
+    color: darkred;
+    top: 50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 70px 30px;
+}
+.announcement-name{
+    margin:0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+    color:darkred;
+}
+.announcement-box-add  input[type=text],textarea[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+.announcement-box-add  input[type=text]:focus,.announcement-box-add textarea[type=text]:focus
+ {
+    outline-color: #CD2626;
+}
+.announcement-add-btn{
+    background-color: #CD2626;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.announcement-add-btn:hover {
+    opacity: 0.8;
+}
+.announcement-add-btn:focus{
+    outline-color: #CD2626;
+}
+.container-announcement {
+    padding: 16px;
+}
+.footer-announcement{
+    padding-top: 550px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+.error-title{
+    color: darkred;
+    text-align: center;
+}
+.error-message{
+    color: darkred;
+    font-size: 29px;
+    margin-left: 350px;
+}
+.stats-style{
+    color:darkred;
+    font-size: 30px;
+    margin-left: 500px;
+    margin-top: 100px;
+}
+.title-announcement{
+    text-align: center;
+    color: darkred;
+    margin-top: 70px;
+    padding: 5px;
+}
+.new-button {
+    position: absolute;
+    font-weight: bold;
+    top: 30%;
+    left: 10%;
+    text-decoration: none;
+    color: white;
+    padding: 14px 37px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid #CD2626;
+    background-color: #CD2626;
+}
+.new-button:hover {
+    background: darkred;
+    border: 2px solid #CD2626;
+    color: white;
+}
+.new-button-delete{
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    text-decoration: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid #CD2626;
+    background-color: #CD2626;
+}
+.new-button-delete:hover {
+    background: darkred;
+    color: white;
+    border: 2px solid #CD2626;
+}
+#nameAnnouncement{
+    color: black;
+    font-size: 20px;
+    margin-left: 520px;
+}
+#date{
+    color: black;
+    font-size: 17px;
+}
+#descriptionAnnouncement{
+    color: black;
+    font-size: 17px;
+    margin-left: 520px;
+}
+
+

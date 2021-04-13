@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <a class="nav-link" href="#">TastyFood</a>
+    <div class="navbar-right">
+        <a class="home" href="/home">Начало</a>
+        <a class="profile" href="/user/profile">Профил</a>
+        <a class="shopping-bag" th:if="${isUser}" href="/user/shopping-bag">Количка</a>
+        <a class="logout" href="/user/logout">Изход</a>
+    </div>
+</nav>
+</header>
+<main>
+    <div class="polaroid-restaurant-d">
+    <div th:each="t:${restaurant}" th:object="${t}">
+        <p th:text="*{name}" class="name-restaurant"></p>
+        <img class="imgRestaurant" th:src="*{pictureUrl}"
+             alt="5 Terre" style="width:100%">
+        <p th:text="|Адрес: *{address}|" class="name-restaurant-d"></p>
+    </div>
+        <div class="position-menu">
+        <a class="menu-btn" th:href="@{/meal/restaurant-meals/(id=*{restaurant_id})}">Меню</a>
+        </div>
+            <div class="position-add-review">
+            <a class="add-review" th:if="${isUser}" th:href="@{/review/add/(restaurant_id=${restaurant_id})}" type="submit">Добави ревю</a>
+            </div>
+        <div class="position-view-review">
+            <a class="view-review" th:href="@{/review/seeReviews/(id=*{restaurant_id})}">Виж ревютата</a>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>

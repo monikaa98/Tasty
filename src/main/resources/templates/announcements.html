@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar" th:object="${email}">
+        <a class="nav-link" href="#">TastyFood</a>
+        <div class="navbar-right">
+            <a class="home" href="/home">Начало</a>
+            <a class="logout" href="/user/logout">Изход</a>
+        </div>
+    </nav>
+</header>
+<div class="title-announcement" id="title">
+    <h2>Добре дошли в страницата на обявленията!</h2>
+</div>
+<div class="container">
+    <div th:object="${announcement}" th:each="announcement: ${announcements}"
+         class="my-3 border-secondary card">
+        <div class="card-header" id="nameAnnouncement" >
+            <div class="d-flex justify-content-between">
+                <div class="col-10">
+                    <span th:text="*{title}">Title</span>
+                    <small id="date">
+                        <em>
+                            (последно актуализиране на <span th:text="*{#temporals.format(updatedOn, 'dd-MM-yyyy HH:mm')}">1980-01-01</span>)
+                        </em>
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p th:text="*{description}" class="card-text" id="descriptionAnnouncement"></p>
+        </div>
+    </div>
+</div>
+<div>
+    <a th:if="${isAdmin}" th:object="${email}" class="new-button" id="new"
+       href="/announcements/new" role="button">
+        Добави oбявление
+    </a>
+</div>
+<div >
+    <a th:if="${isAdmin}" class="new-button-delete" id="delete"
+       href="/announcements/delete" role="button">
+        Изтрий oбявленията
+    </a>
+</div>
+<footer>
+    <div class="footer-announcement">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>

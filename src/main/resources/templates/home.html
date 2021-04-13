@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <a class="nav-link"  href="#">TastyFood</a>
+        <div class="navbar-right" >
+            <a class="add-town"  th:if="${isRestaurateur}" href="/town/add">Добави град</a>
+            <a class="stats" th:if="${isAdmin}" href="/stats" >Статистика</a>
+            <a class="announcements"
+               href="/announcements">Обявления</a>
+            <a class="profile" href="/user/profile">Профил</a>
+            <a class="shopping-bag" th:if="${isUser}" href="/user/shopping-bag">Количка</a>
+            <a class="logout" href="/user/logout">Изход</a>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="name-city-no" th:if="${towns.isEmpty()}">Все още няма добавени градове!</div>
+    <div class="name-city-yes" th:if="${!towns.isEmpty()}" >Изберете вашия град</div>
+    <div class="row-town" >
+        <div class="column-town" th:each="t:${towns}" th:object="${t}">
+            <img class="imgTown"  th:src="*{pictureUrl}" alt="Town Picture">
+            <a th:text="*{name}" class="name-town" th:href="@{/restaurant/town-restaurants/(id=*{id})}">TownName</a>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-home">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>

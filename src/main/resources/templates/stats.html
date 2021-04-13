@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <a class="nav-link" href="#">TastyFood</a>
+        <div class="navbar-right">
+            <a class="home" href="/home">Начало</a>
+            <a class="logout" href="/user/logout">Изход</a>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="stats-style">
+        <div>
+            Total request so far <span th:text="${requestCount}"></span>
+        </div>
+        <div>
+            Total requests so far <span th:text="${startedOn}"></span>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <a class="nav-link" href="#">TastyFood</a>
+    <div class="navbar-right">
+        <a class="home" href="/home">Начало</a>
+        <a class="profile" href="/user/profile">Профил</a>
+        <a class="logout" href="/user/logout">Изход</a>
+    </div>
+</nav>
+</header>
+<main>
+    <p class="shopping-bag-title">Количка</p>
+    <div class="shopping-bag-null" th:if="${products.isEmpty()}">Вашата количка е празна!</div>
+    <div class="shopping-bag-image" th:if="${products.isEmpty()}"> <img src="/picture/shopping-bag.png" width="130" height="130" class="shopping-bag-img"></div>
+    <div>
+    <div class="col-25-shopping-bag">
+        <div class="container-shopping-bag" th:each="p:${products}" th:object="${p}">
+           <span class="price-shopping-bag" style="color:black">
+                <i  class="fa fa-shopping-cart"></i>
+           </span>
+            <div class="img-shopping-bag"><img
+                    th:src="*{pictureUrl}"
+                    class="img-shopping-bag"></div>
+            <p><a class="name-product-shopping-bag" th:text="*{name}"></a>
+                <span class="price-shopping-bag" th:text="|*{price} лв.|"></span>
+            </p>
+        </div>
+    </div>
+    <hr class="hr-shopping-bag" th:if="${!products.isEmpty()}">
+        <p th:if="${!products.isEmpty()}" th:text="|Общо: ${totalPrice} лв.|"><span class="price-shopping-bag" th:if="${!products.isEmpty()}" style="color:black" th:text="*{totalPrice}"><b></b></span></p>
+    <a class="btn-shopping-bag" th:if="${!products.isEmpty()}" th:href="@{/order/add-address}">Продължете с поръчката</a>
+    </div>
+</main>
+<footer>
+    <div class="footer-shopping-bag">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>

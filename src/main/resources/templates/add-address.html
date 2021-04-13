@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <a class="nav-link" href="#">TastyFood</a>
+    <div class="navbar-right">
+        <a class ="home" href="/home">Начало</a>
+        <a class="shopping-bag"  href="/user/shopping-bag">Количка</a>
+        <a class="logout" href="/user/logout">Изход</a>
+    </div>
+</nav>
+</header>
+<main>
+    <div class="row-address" >
+    <div class="col-75-address">
+        <div class="container-address">
+            <form th:object="${addressAddBindingModel}" th:action="@{/order/add-address}" method="POST" action="">
+                <div class="row-address">
+                    <div class="col-50-address">
+                        <h2>Адрес за доставка</h2>
+                        <label for="address"><i class="fa fa-address-card-o"></i>Адрес</label>
+                        <input autocomplete="off" th:field="*{address}" th:errorclass="bg-danger" type="text" id="address" name="address" placeholder="Въведи адрес">
+                        <small class="address-add-small" th:each = "e : ${#fields.errors('address')}" th:text = "${e}" ></small>
+                        <label for="phone"><i class="fa fa-envelope"></i>Телефон</label>
+                        <input autocomplete="off" th:field="*{phoneNumber}" th:errorclass="bg-danger" type="number" id="phone" name="phone" placeholder="Въведи телефонен номер">
+                        <small  class="address-add-small" th:each = "e : ${#fields.errors('phoneNumber')}" th:text = "${e}" ></small>
+                    </div>
+                </div>
+                <input type="submit" value="Продължи с поръчката" class="btn-address">
+            </form>
+                  <a th:href="@{/user/shopping-bag}">
+                        <button class="btn-shopping-bag-adr">Върни се обратно към количката</button>
+                    </a>
+        </div>
+    </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>

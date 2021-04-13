@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <a class="nav-link" href="#">TastyFood</a>
+    <div class="navbar-right">
+        <a class="home" href="/home">Начало</a>
+        <a class="logout" href="/user/logout">Изход</a>
+    </div>
+</nav>
+</header>
+<main>
+    <div class="add-meal-box" th:object="${restaurantId}">
+        <h1 class="meal-name">Добави ястие</h1>
+        <form th:object="${mealAddBindingModel}" th:action="@{/meal/add/(restaurant_id=${restaurantId})}" method="POST" enctype="multipart/form-data">
+            <div class="container-meal">
+            <div>
+                <label><b>Име</b></label>
+                <input  autocomplete="off" th:field="*{name}" th:errorclass="bg-danger"  type="text" name="name" placeholder="Въведете име"  >
+                <small  th:each = "e : ${#fields.errors('name')}" th:text = "${e}" class="text-danger"></small>
+            </div>
+            <div>
+                <div>
+                    <label ><b>Грамаж</b></label>
+                    <input autocomplete="off" th:field="*{grams}" th:errorclass="bg-danger" type="number" name="grams" placeholder="Въведете грамаж"  >
+                    <small  th:each = "e : ${#fields.errors('grams')}" th:text = "${e}" class="text-danger"></small>
+                </div>
+                <label><b>Съставки</b></label>
+                <textarea autocomplete="off" th:field="*{ingredients}" th:errorclass="bg-danger" type="text" class="textarea-meal"  placeholder="Въведете съставките"  ></textarea>
+                <small  th:each = "e : ${#fields.errors('ingredients')}" th:text = "${e}" class="text-danger"></small>
+            </div>
+            <div>
+                <label ><b>Категория</b></label>
+                <select th:field="*{category}" th:errorclass="bg-danger" class="select-meal-add"  name="category-meal" required>
+                    <option value="">Категории храни</option>
+                    <option th:each="o:${T(project.tastyfood.model.entity.enums.CategoryName).values()}" th:text="${o}" th:value="${o}"></option>
+                </select>
+            </div>
+            <div>
+                <label ><b>Цена</b></label>
+                <input autocomplete="off" th:field="*{price}" th:errorclass="bg-danger" type="number" name="price" placeholder="Въведете цена"  >
+                <small  th:each = "e : ${#fields.errors('price')}" th:text = "${e}" class="text-danger"></small>
+            </div>
+            <div>
+                <label><b>Избери снимка</b></label>
+                <input type="file" name="picture" placeholder="Enter picture" accept="picture/*">
+            </div>
+                <button class="add-meal-button" type="submit">Добави ястие</button>
+            </div>
+        </form>
+    </div>
+</main>
+<footer>
+    <div class="footer-add-meal">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>

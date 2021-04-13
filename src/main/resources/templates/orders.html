@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <a class="nav-link" href="#">TastyFood</a>
+    <div class="navbar-right">
+        <a class="home" href="/home">Начало</a>
+        <a class="shopping-bag" href="/user/shopping-bag">Количка</a>
+        <a class="profile" href="/user/profile">Профил</a>
+        <a class="logout" href="/user/logout">Изход</a>
+    </div>
+</nav>
+</header>
+<main th:object="${orders}">
+    <p class="orders-no" th:if="${orders.isEmpty()}">Все още нямате поръчки!</p>
+    <p class="orders-name" th:if="${!orders.isEmpty()}">Поръчки</p>
+    <div class="container mt-5-orders">
+        <div class="d-flex justify-content-center-orders row">
+            <div class="col-md-10-orders">
+                <div class="rounded-orders">
+                    <div style="overflow-x:auto;" class="table-responsive table-borderless-orders">
+                        <table>
+                            <tr th:if="${!orders.isEmpty()}">
+                                <th>Номер на поръчката</th>
+                                <th>Продукт</th>
+                                <th>Адрес</th>
+                                <th>Телефонен номер</th>
+                                <th>Статус</th>
+                                <th>Общо</th>
+                            </tr>
+                            <tr th:each="o:${orders}" th:object="${o}">
+                                <td th:text="*{id}"></td>
+                                <td th:text="*{product}"></td>
+                                <td th:text="*{address}"></td>
+                                <td th:text="*{phoneNumber}"></td>
+                                <td th:text="*{status}"></td>
+                                <td th:text="|*{totalPrice} лв.|"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+<footer>
+    <div class="footer-orders">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TastyFood</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <a class="nav-link" href="#">TastyFood</a>
+    <div class="navbar-right">
+        <a class="home" href="/home">Начало</a>
+        <a class="profile" href="/user/profile">Профил</a>
+        <a class="logout" href="/user/logout">Изход</a>
+    </div>
+</nav>
+</header>
+<main>
+    <div th:object="${user}">
+    <div class="inName-user">
+                                <h1>Лична информация</h1>
+                            </div>
+        <div class="profileImage" > <img src="/picture/user-profile-picture.png" width="130" height="130" class="user-img"></div>
+        <div style="overflow-x:auto;">
+        <table class="user-information">
+            <tr class="info-user">
+                <td>Име:</td>
+                <td class="information-user" th:text="*{firstName}"></td>
+            </tr>
+            <tr class="info-user">
+                <td>Фамилия:</td>
+                <td class="information-user" th:text="*{lastName}"></td>
+            </tr>
+            <tr class="info-user">
+                <td>Имейл:</td>
+                <td class="information-user" th:text="*{email}"></td>
+            </tr>
+            <tr class="info-user">
+                <td>Роля:</td>
+                <td class="information-user" th:text="*{roleName}"></td>
+            </tr>
+        </table>
+</div>
+</div>
+</main>
+<footer>
+    <div class="footer">
+        &copy;2021 Copyright:TastyFood
+    </div>
+</footer>
+</body>
+</html>
