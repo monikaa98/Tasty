@@ -27,14 +27,11 @@ public class UserController {
     private final UserService userService;
     private final ModelMapper modelMapper;
 
-
-
     @Autowired
     public UserController(UserService userService, ModelMapper modelMapper) {
         this.userService = userService;
         this.modelMapper = modelMapper;
     }
-
 
     @GetMapping("/register")
     public String register(Model model) {
@@ -67,7 +64,6 @@ public class UserController {
 
         return "index";
     }
-
 
     @GetMapping("/login")
     public String login(Model model) {
@@ -110,7 +106,6 @@ public class UserController {
         return "redirect:/";
     }
 
-
     @GetMapping("/shopping-bag")
     public String shoppingBag(Model model, @AuthenticationPrincipal Principal principal) {
         List<MealViewModel> mealViewModelList = this.userService.getProductBag(principal.getName());
@@ -121,8 +116,6 @@ public class UserController {
         return "shopping-bag";
     }
 
-
-
     @GetMapping("/profile")
     public ModelAndView profile(ModelAndView modelAndView, @AuthenticationPrincipal Principal principal) {
         modelAndView.setViewName("profile");
@@ -130,7 +123,6 @@ public class UserController {
         modelAndView.addObject("isUser",userService.isUser(principal.getName()));
         return modelAndView;
     }
-
 
     @GetMapping("/profile-info")
     public ModelAndView profileInfo(@RequestParam("email") String email, ModelAndView modelAndView,
