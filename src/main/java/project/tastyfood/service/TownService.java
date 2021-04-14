@@ -1,7 +1,5 @@
 package project.tastyfood.service;
 
-
-
 import project.tastyfood.model.service.PictureServiceModel;
 import project.tastyfood.model.service.TownServiceModel;
 import project.tastyfood.model.view.TownViewModel;
