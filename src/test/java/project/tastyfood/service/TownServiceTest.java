@@ -21,7 +21,6 @@ import project.tastyfood.repository.UserRepository;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import javax.transaction.Transactional;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
