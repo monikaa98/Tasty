@@ -6,7 +6,4 @@ import project.tastyfood.model.entity.enums.CategoryName;
 public interface  CategoryService {
     void initCategories();
     Category findByName(CategoryName categoryName);
-
-
-
 }
