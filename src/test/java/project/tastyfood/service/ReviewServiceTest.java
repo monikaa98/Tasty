@@ -19,7 +19,6 @@ import static org.mockito.ArgumentMatchers.any;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class ReviewServiceTest {
-
     @Autowired
     private ReviewRepository reviewRepository;
     @Autowired
