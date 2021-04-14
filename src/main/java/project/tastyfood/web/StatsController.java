@@ -1,6 +1,5 @@
 package project.tastyfood.web;
 
-
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +8,6 @@ import project.tastyfood.service.StatsService;
 import project.tastyfood.service.UserService;
 
 import java.security.Principal;
-
 
 @Controller
 public class StatsController {
