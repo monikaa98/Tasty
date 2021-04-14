@@ -49,6 +49,7 @@ private Picture picture;
     public void setUserEntity(UserEntity userEntity) {
         this.userEntity = userEntity;
     }
+    
     @ManyToOne
     public Town getTown() {
         return town;
@@ -57,6 +58,7 @@ private Picture picture;
     public void setTown(Town town) {
         this.town = town;
     }
+    
     @ManyToOne
     public Picture getPicture() {
         return picture;
