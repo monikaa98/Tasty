@@ -14,7 +14,6 @@ import project.tastyfood.model.binding.PictureAddBindingModel;
 import project.tastyfood.model.service.PictureServiceModel;
 import project.tastyfood.service.UserService;
 
-
 import javax.validation.Valid;
 import java.security.Principal;
 
