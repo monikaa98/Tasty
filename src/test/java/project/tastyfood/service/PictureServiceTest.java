@@ -15,7 +15,6 @@ import javax.transaction.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class PictureServiceTest {
-
     @Autowired
     private PictureService pictureService;
     @Autowired
