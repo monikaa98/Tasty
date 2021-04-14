@@ -19,7 +19,6 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class CategoryServiceTest {
-
     @Autowired
     private CategoryService categoryService;
     @Autowired
