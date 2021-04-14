@@ -26,7 +26,6 @@ import java.security.Principal;
 @WebAppConfiguration
 @Transactional
 public class ReviewControllerTest {
-
     @Autowired
     private ReviewController reviewController;
     @Mock
