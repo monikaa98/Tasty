@@ -31,7 +31,6 @@ import static org.mockito.ArgumentMatchers.any;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class TownServiceTest {
-
     @Autowired
     private TownService townService;
     @MockBean
@@ -83,7 +82,7 @@ public class TownServiceTest {
     }
 
     @Test(expected = NullPointerException.class)
-   public void testGetAllTowns() {
+    public void testGetAllTowns() {
         List<Town> towns = new ArrayList<>();
         towns.add(new Town());
         Mockito.when(townRepository.findAll()).thenReturn(towns);
