@@ -30,13 +30,10 @@ public class PictureControllerTest {
     @Mock
     private Model model;
 
-
-
     @Test
     public void testAddMethod(){
         String view=this.pictureController.add("id",model,principal);
         Assert.assertEquals("add-town",view);
     }
-
 
 }
