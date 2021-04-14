@@ -87,7 +87,6 @@ public class MealServiceTest {
         meal.setCategory(new Category());
     }
 
-
     @Test
     public void testGetAllMealFromRestaurantById() {
         MealViewModel mealViewModel = new MealViewModel();
@@ -101,8 +100,6 @@ public class MealServiceTest {
         Picture picture=new Picture();
         picture.setPictureUrl("/meals.html");
         mealViewModel.setPictureUrl(picture.getPictureUrl());
-
-
     }
 
     @Test
@@ -110,10 +107,8 @@ public class MealServiceTest {
         this.mealService.buyMeal("id","monika@abv.bg");
     }
 
-
     @Test
     public void testFindAllMealsByCategoryNameFromThatRestaurant(){
-
     }
 
 }
