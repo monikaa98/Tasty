@@ -1,7 +1,5 @@
 package project.tastyfood.model.service;
 
-
-
 public class RestaurantServiceModel {
     private String id;
     private String name;
