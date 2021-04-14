@@ -26,7 +26,6 @@ import static org.mockito.ArgumentMatchers.any;
 @WebAppConfiguration
 @Transactional
 public class RestaurantServiceTest {
-
     @Autowired
     private RestaurantService restaurantService;
     @Autowired
