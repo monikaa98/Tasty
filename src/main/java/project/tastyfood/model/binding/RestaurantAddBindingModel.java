@@ -1,8 +1,6 @@
 package project.tastyfood.model.binding;
 
 import org.hibernate.validator.constraints.Length;
-
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
