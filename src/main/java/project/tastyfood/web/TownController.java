@@ -26,14 +26,10 @@ public class TownController {
     private final TownService townService;
     private final ModelMapper modelMapper;
 
-
-
     @Autowired
     public TownController(TownService townService, ModelMapper modelMapper) {
         this.townService = townService;
         this.modelMapper = modelMapper;
-
-
     }
 
     @GetMapping("/add")
@@ -43,7 +39,6 @@ public class TownController {
         }
         return "add-town";
     }
-
 
     @PostMapping("/add")
     public String addTownConfirm(@Valid @ModelAttribute("townAddBindingModel")
