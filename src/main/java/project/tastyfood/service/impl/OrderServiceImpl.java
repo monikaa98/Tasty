@@ -22,15 +22,12 @@ public class OrderServiceImpl implements OrderService {
     private final ModelMapper modelMapper;
     private final UserService userService;
 
-
     @Autowired
     public OrderServiceImpl(OrderRepository orderRepository, ModelMapper modelMapper,UserService userService) {
         this.orderRepository = orderRepository;
         this.modelMapper = modelMapper;
         this.userService = userService;
-
     }
-
 
     @Override
     public void addAddress(OrderServiceModel orderServiceModel,String email) {
@@ -54,8 +51,6 @@ public class OrderServiceImpl implements OrderService {
         this.userService.clearBag(email);
     }
 
-
-
     @Override
     public List<OrderViewModel> getAllOrders(String email) {
         List<Order>orders=this.orderRepository.findAllByUserEntity_Email(email);
@@ -66,7 +61,6 @@ public class OrderServiceImpl implements OrderService {
             orderViewModel.setPhoneNumber(order.getPhoneNumber());
             orderViewModel.setTotalPrice(order.getTotalPrice());
             orderViewModel.setStatus(order.getStatus());
-
             orderViewModel.setId(order.getId());
             String products="";
             int i=0;
@@ -84,8 +78,4 @@ public class OrderServiceImpl implements OrderService {
         }
         return ordersViewModels;
     }
-
-
-
-
 }
