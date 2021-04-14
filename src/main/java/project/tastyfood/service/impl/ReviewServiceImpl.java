@@ -27,9 +27,7 @@ public class ReviewServiceImpl implements ReviewService {
         this.modelMapper = modelMapper;
         this.reviewRepository = reviewRepository;
         this.restaurantService = restaurantService;
-
     }
-
 
     @Override
     public void addReview(ReviewServiceModel reviewServiceModel, String restaurantId) {
