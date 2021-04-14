@@ -20,9 +20,7 @@ import java.security.Principal;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @Transactional
-
 public class PictureControllerTest {
-
     @Autowired
     private PictureController pictureController;
     @Mock
