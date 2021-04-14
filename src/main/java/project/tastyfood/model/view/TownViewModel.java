@@ -32,5 +32,4 @@ public class TownViewModel {
         this.pictureUrl = pictureUrl;
     }
 
-
 }
