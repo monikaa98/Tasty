@@ -57,7 +57,6 @@ public class RestaurantServiceTest {
     public void testGetAllRestaurantFromThatTownToBeWithWrongIdAndToThrowException(){
         String restaurantId="InvalidId";
         this.restaurantService.getRestaurantFromTownById(restaurantId);
-
     }
 
     @Test(expected = IllegalArgumentException.class)
