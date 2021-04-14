@@ -10,7 +10,6 @@ import javax.transaction.Transactional;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-
 @Entity
 @Table(name="reviews")
 @Transactional
