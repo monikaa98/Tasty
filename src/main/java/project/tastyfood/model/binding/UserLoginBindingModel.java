@@ -22,7 +22,6 @@ public class UserLoginBindingModel {
         this.email = email;
     }
 
-
     @Length(min=3, message = "Паролата трябва да бъде поне 3 символа.")
     @NotBlank(message = "Не трябва да бъде празно.")
     public String getPassword() {
