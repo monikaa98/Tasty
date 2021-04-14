@@ -31,7 +31,6 @@ import java.util.*;
 @Transactional
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
-
     private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
     private final UserDetailsService userDetailsService;
@@ -52,7 +51,6 @@ public class UserServiceImpl implements UserService {
         this.pictureService = pictureService;
         this.categoryService = categoryService;
     }
-
 
     @Override
     public boolean existsUser(String username) {
@@ -85,8 +83,6 @@ public class UserServiceImpl implements UserService {
 
     }
 
-
-
     @Override
     public void addMealToUserProduct(MealServiceModel mealServiceModel, String email,Restaurant restaurant) {
         UserEntity userEntity=this.userRepository.findByEmail(email).orElse(null);
@@ -105,8 +101,6 @@ public class UserServiceImpl implements UserService {
 
 
     }
-
-
 
     @Override
     public List<MealViewModel> getProductBag(String email) {
@@ -127,7 +121,6 @@ public class UserServiceImpl implements UserService {
 
         throw new UserNotFoundException(email);
     }
-
 
     @Override
     public Double totalPrice(String email) {
@@ -231,7 +224,6 @@ public class UserServiceImpl implements UserService {
         }
         return false;
     }
-
 
     @Override
     public UserViewModel findUser(String email) {
