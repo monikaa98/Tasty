@@ -11,8 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 import project.tastyfood.web.HomeController;
 import javax.transaction.Transactional;
 
-
-
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
