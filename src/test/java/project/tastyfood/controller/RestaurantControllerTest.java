@@ -29,7 +29,6 @@ import java.security.Principal;
 @WebAppConfiguration
 @Transactional
 public class RestaurantControllerTest {
-
     @Autowired
     private RestaurantController restaurantController;
     @Mock
