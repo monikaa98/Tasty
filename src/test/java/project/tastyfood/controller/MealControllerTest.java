@@ -28,7 +28,6 @@ import java.security.Principal;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @Transactional
-
 public class MealControllerTest {
     @Autowired
     private MealController mealController;
