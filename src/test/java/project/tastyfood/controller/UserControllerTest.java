@@ -47,7 +47,6 @@ public class UserControllerTest {
     @Autowired
     private UserRepository userRepository;
 
-
     @Test
     public void testRegister(){
         String view=this.userController.register(model);
@@ -108,7 +107,6 @@ public class UserControllerTest {
     public void testLogout(){
         String view=this.userController.logout(httpSession);
         Assert.assertEquals("redirect:/",view);
-
     }
 
     @Test(expected = UserNotFoundException.class)
@@ -130,8 +128,5 @@ public class UserControllerTest {
         String view=this.userController.shoppingBag(model,principal);
         Assert.assertEquals("shopping-bag",view);
     }
-
-
-
 
 }
