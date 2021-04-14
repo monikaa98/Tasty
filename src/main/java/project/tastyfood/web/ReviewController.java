@@ -15,7 +15,6 @@ import project.tastyfood.model.view.ReviewViewModel;
 import project.tastyfood.service.ReviewService;
 import project.tastyfood.service.UserService;
 
-
 import javax.validation.Valid;
 import java.security.Principal;
 import java.util.List;
