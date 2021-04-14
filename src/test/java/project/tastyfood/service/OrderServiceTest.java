@@ -32,7 +32,6 @@ public class OrderServiceTest {
     @MockBean
     private OrderRepository orderRepository;
 
-
     @Test(expected = IllegalArgumentException.class)
     public void testAddAddressWhenNullThrow() throws Exception {
         orderService.addAddress(null,null);
