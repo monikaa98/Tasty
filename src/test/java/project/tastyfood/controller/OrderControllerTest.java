@@ -25,7 +25,6 @@ import java.security.Principal;
 @WebAppConfiguration
 @Transactional
 public class OrderControllerTest {
-
     @Autowired
     private OrderController orderController;
     @Mock
