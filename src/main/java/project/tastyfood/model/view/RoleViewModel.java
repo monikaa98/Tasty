@@ -4,7 +4,6 @@ public class RoleViewModel {
     private String role;
 
     public RoleViewModel() {
-
     }
 
     public String getRole() {
