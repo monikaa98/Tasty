@@ -44,16 +44,19 @@ public class AnnouncementControllerTest {
         String view=this.announcementController.announcement(model,principal);
         Assert.assertEquals("announcements",view);
     }
+    
     @Test(expected = UserNotFoundException.class)
     public void testNewToWork(){
         String view=this.announcementController.newAnnouncement(model,principal);
         Assert.assertEquals("new",view);
     }
+    
     @Test(expected = UserNotFoundException.class)
     public void testNewToForbidAccess(){
         String view=this.announcementController.newAnnouncement(model,principal);
         Assert.assertEquals("redirect:/home",view);
     }
+    
     @Test(expected = UserNotFoundException.class)
     public void testSave(){
         AnnouncementAddBindingModel announcementAddBindingModel=new AnnouncementAddBindingModel();
@@ -62,6 +65,7 @@ public class AnnouncementControllerTest {
         String view=this.announcementController.save(announcementAddBindingModel,bindingResult,redirectAttributes,principal);
         Assert.assertEquals("redirect:/announcements",view);
     }
+    
     @Test(expected = UserNotFoundException.class)
     public void testSaveToForbidAccess(){
         AnnouncementAddBindingModel announcementAddBindingModel=new AnnouncementAddBindingModel();
@@ -70,6 +74,7 @@ public class AnnouncementControllerTest {
         String view=this.announcementController.save(announcementAddBindingModel,bindingResult,redirectAttributes,principal);
         Assert.assertEquals("redirect:/home",view);
     }
+    
     @Test(expected = UserNotFoundException.class)
     public void testDelete(){
         Announcement announcement=new Announcement();
