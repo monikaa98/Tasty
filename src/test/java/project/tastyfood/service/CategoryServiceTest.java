@@ -12,7 +12,6 @@ import project.tastyfood.repository.CategoryRepository;
 
 import javax.transaction.Transactional;
 
-
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
