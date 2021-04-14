@@ -5,7 +5,6 @@ import project.tastyfood.model.service.MealServiceModel;
 import project.tastyfood.model.service.PictureServiceModel;
 import project.tastyfood.model.view.MealViewModel;
 
-
 import java.util.List;
 
 public interface MealService {
