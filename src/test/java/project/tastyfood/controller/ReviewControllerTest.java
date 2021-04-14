@@ -60,5 +60,4 @@ public class ReviewControllerTest {
         modelAndView=this.reviewController.listOfReviews("id",modelAndView,principal);
     }
 
-
 }
