@@ -22,7 +22,6 @@ public class HomeControllerTest {
     @Autowired
     private HomeController homeController;
 
-
     @Test
     public void testIndexMethod(){
         ModelAndView modelAndView=new ModelAndView();
