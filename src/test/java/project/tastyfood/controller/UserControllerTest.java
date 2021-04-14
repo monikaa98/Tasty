@@ -19,7 +19,6 @@ import project.tastyfood.model.entity.UserEntity;
 import project.tastyfood.repository.UserRepository;
 import project.tastyfood.web.UserController;
 
-
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 import java.security.Principal;
