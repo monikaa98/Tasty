@@ -18,11 +18,8 @@ import project.tastyfood.model.entity.enums.CategoryName;
 import project.tastyfood.repository.MealRepository;
 import project.tastyfood.web.MealController;
 
-
-
 import javax.transaction.Transactional;
 import java.security.Principal;
-
 
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
