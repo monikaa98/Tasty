@@ -16,10 +16,8 @@ import project.tastyfood.error.UserNotFoundException;
 import project.tastyfood.model.binding.ReviewAddBindingModel;
 import project.tastyfood.web.ReviewController;
 
-
 import javax.transaction.Transactional;
 import java.security.Principal;
-
 
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
