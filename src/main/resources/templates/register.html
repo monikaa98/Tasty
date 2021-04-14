@@ -41,7 +41,7 @@
                 <label ><b>Роля</b></label>
                 <select th:field="*{roleName}" th:errorclass="bg-danger"
                          name="category-roles" class="select-register" required>
-                    <option value ="">Изберете роля</option>
+                    <option value ="">Изберете потребител или ресторантьор</option>
                     <option th:each="o:${T(project.tastyfood.model.entity.enums.RoleName).values()}"
                             th:text="${o}" th:value="${o}"></option>
                 </select>
