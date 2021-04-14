@@ -26,7 +26,6 @@ public class RestaurantServiceImpl implements RestaurantService{
     private final UserService userService;
     private final TownService townService;
 
-
 @Autowired
     public RestaurantServiceImpl(RestaurantRepository restaurantRepository, ModelMapper modelMapper, PictureService pictureService, UserService userService, TownService townService) {
         this.restaurantRepository = restaurantRepository;
@@ -34,7 +33,6 @@ public class RestaurantServiceImpl implements RestaurantService{
         this.pictureService = pictureService;
         this.userService = userService;
         this.townService = townService;
-
 }
 
     @Override
@@ -71,7 +69,6 @@ public class RestaurantServiceImpl implements RestaurantService{
         throw new RestaurantNotFoundException(id);
 
 }
-
 
     @Override
     public List<RestaurantViewModel> getAllRestaurantsFromTownById(String id) {
