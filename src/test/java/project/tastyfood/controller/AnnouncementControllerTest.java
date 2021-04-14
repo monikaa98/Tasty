@@ -20,7 +20,6 @@ import javax.transaction.Transactional;
 import java.security.Principal;
 import java.time.Instant;
 
-
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
