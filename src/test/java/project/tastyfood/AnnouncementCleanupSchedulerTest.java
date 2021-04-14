@@ -14,7 +14,6 @@ import javax.transaction.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class AnnouncementCleanupSchedulerTest {
-
     @Autowired
     private AnnouncementService announcementService;
 
