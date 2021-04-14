@@ -16,11 +16,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import project.tastyfood.model.binding.TownAddBindingModel;
 import project.tastyfood.web.TownController;
 
-
-
 import javax.transaction.Transactional;
-
-
 
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
