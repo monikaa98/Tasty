@@ -4,7 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import project.tastyfood.model.entity.Town;
 
-
 import java.util.Optional;
 
 @Repository
