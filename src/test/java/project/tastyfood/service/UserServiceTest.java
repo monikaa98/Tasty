@@ -18,7 +18,6 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class UserServiceTest {
-
     @Autowired
     private UserRepository userRepository;
     @Autowired
