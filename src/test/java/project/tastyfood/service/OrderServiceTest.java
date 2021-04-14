@@ -26,7 +26,6 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class OrderServiceTest {
-
     @Autowired
     private OrderService orderService;
     @MockBean
