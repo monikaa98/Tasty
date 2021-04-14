@@ -3,7 +3,6 @@ package project.tastyfood.model.view;
 import project.tastyfood.model.entity.Restaurant;
 import project.tastyfood.model.entity.enums.CategoryName;
 
-
 public class MealViewModel {
     private String id;
     private String name;
