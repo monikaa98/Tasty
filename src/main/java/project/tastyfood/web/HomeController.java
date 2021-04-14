@@ -9,7 +9,6 @@ import project.tastyfood.model.view.TownViewModel;
 import project.tastyfood.service.TownService;
 import project.tastyfood.service.UserService;
 
-
 import java.security.Principal;
 import java.util.List;
 
