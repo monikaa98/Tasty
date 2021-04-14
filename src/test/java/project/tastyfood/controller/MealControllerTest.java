@@ -43,13 +43,11 @@ public class MealControllerTest {
     @Mock
     private RedirectAttributes redirectAttributes;
 
-
     @Test
     public void testAddMeal(){
         String view=this.mealController.addMeal("id",model);
         Assert.assertEquals("add-meal",view);
     }
-
 
     @Test(expected = IllegalArgumentException.class)
     public void testAddMealConfirm(){
