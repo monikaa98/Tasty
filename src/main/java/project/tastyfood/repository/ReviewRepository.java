@@ -6,7 +6,6 @@ import project.tastyfood.model.entity.Review;
 
 import java.util.List;
 
-
 @Repository
 public interface ReviewRepository extends JpaRepository<Review,String> {
     List<Review> findAllByRestaurant_Id(String id);
