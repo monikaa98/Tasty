@@ -26,7 +26,6 @@ import project.tastyfood.service.UserService;
 import javax.transaction.Transactional;
 import java.util.*;
 
-
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
