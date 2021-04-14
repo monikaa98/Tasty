@@ -15,10 +15,7 @@ import project.tastyfood.model.service.PictureServiceModel;
 import project.tastyfood.model.service.TownServiceModel;
 import project.tastyfood.service.TownService;
 
-
-
 import javax.validation.Valid;
-
 
 @Controller
 @RequestMapping("/town")
