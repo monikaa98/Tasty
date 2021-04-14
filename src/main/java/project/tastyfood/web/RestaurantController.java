@@ -18,7 +18,6 @@ import project.tastyfood.model.view.RestaurantViewModel;
 import project.tastyfood.service.RestaurantService;
 import project.tastyfood.service.UserService;
 
-
 import javax.validation.Valid;
 import java.security.Principal;
 import java.util.List;
