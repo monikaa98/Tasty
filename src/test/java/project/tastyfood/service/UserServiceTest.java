@@ -24,7 +24,6 @@ public class UserServiceTest {
     @Autowired
     private UserService userService;
 
-
     @Test(expected = UserNotFoundException.class)
     public void testFindUserThrowingException(){
         String email="wrongEmail";
@@ -110,6 +109,5 @@ public class UserServiceTest {
         UserService userService=mock(UserService.class);
         verify(userService,times(0)).createAdmin();
     }
-
 
 }
