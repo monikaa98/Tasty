@@ -37,7 +37,6 @@ public class OrderControllerTest {
     @Mock
     private RedirectAttributes redirectAttributes;
 
-
     @Test(expected = UserNotFoundException.class)
     public void testShoppingBag(){
         String view=this.orderController.shoppingBag(model,"id",principal);
