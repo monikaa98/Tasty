@@ -30,9 +30,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 permitAll().antMatchers("/").anonymous()
                 .antMatchers("/login","/register").anonymous();
 
-
-
     }
+    
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder authManager) throws Exception {
         authManager.userDetailsService(appUserDetailsService).passwordEncoder(passwordEncoder);
