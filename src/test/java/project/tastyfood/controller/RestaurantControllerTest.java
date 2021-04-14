@@ -43,7 +43,6 @@ public class RestaurantControllerTest {
     @Mock
     private RedirectAttributes redirectAttributes;
 
-
     @Test
     public void testAddRestaurant(){
         String view=this.restaurantController.addRestaurant("id",model);
