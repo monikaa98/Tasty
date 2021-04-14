@@ -29,7 +29,6 @@ public class OrderController {
     private final MealService mealService;
     private final UserService userService;
 
-
     @Autowired
     public OrderController(OrderService orderService, ModelMapper modelMapper, MealService mealService, UserService userService) {
         this.orderService = orderService;
@@ -55,9 +54,6 @@ public class OrderController {
         model.addAttribute("isUser",userService.isUser(principal.getName()));
         return "meals";
     }
-
-
-
 
     @GetMapping("/add-address")
     public String addAddress(Model model) {
@@ -85,8 +81,6 @@ public class OrderController {
         return "successful-order";
     }
 
-
-
     @GetMapping("/orders")
     public String orders(Model model,@AuthenticationPrincipal Principal principal) {
         List<OrderViewModel> orders=this.orderService.getAllOrders(principal.getName());
@@ -94,8 +88,5 @@ public class OrderController {
         model.addAttribute("orders",orders);
         return "orders";
     }
-
-
-
 
 }
