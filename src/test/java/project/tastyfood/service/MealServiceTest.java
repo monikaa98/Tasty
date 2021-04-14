@@ -1,6 +1,5 @@
 package project.tastyfood.service;
 
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -20,7 +19,6 @@ import project.tastyfood.repository.PictureRepository;
 import static org.mockito.ArgumentMatchers.any;
 import javax.transaction.Transactional;
 import java.io.IOException;
-
 
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
