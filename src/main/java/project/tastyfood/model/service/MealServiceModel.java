@@ -2,7 +2,6 @@ package project.tastyfood.model.service;
 
 import project.tastyfood.model.entity.enums.CategoryName;
 
-
 public class MealServiceModel {
     private String id;
     private String name;
