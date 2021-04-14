@@ -13,7 +13,6 @@ import project.tastyfood.repository.AnnouncementRepository;
 import javax.transaction.Transactional;
 import java.time.Instant;
 
-
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
