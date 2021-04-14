@@ -11,7 +11,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.ui.Model;
 import project.tastyfood.web.PictureController;
 
-
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 import java.security.Principal;
