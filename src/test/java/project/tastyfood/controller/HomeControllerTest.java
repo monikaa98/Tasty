@@ -18,7 +18,6 @@ import javax.transaction.Transactional;
 @WebAppConfiguration
 @Transactional
 public class HomeControllerTest {
-
     @Autowired
     private HomeController homeController;
 
