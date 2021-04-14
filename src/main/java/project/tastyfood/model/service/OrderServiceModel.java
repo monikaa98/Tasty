@@ -1,6 +1,5 @@
 package project.tastyfood.model.service;
 
-
 import java.util.List;
 
 public class OrderServiceModel {
