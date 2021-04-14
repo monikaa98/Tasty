@@ -40,7 +40,7 @@
             <div>
                 <label ><b>Категория</b></label>
                 <select th:field="*{category}" th:errorclass="bg-danger" class="select-meal-add"  name="category-meal" required>
-                    <option value="">Категории храни</option>
+                    <option value="">Изберете категория</option>
                     <option th:each="o:${T(project.tastyfood.model.entity.enums.CategoryName).values()}" th:text="${o}" th:value="${o}"></option>
                 </select>
             </div>
