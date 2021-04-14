@@ -16,10 +16,8 @@ import project.tastyfood.model.service.PictureServiceModel;
 import project.tastyfood.service.MealService;
 import project.tastyfood.service.UserService;
 
-
 import javax.validation.Valid;
 import java.security.Principal;
-
 
 @Controller
 @RequestMapping("/meal")
@@ -27,7 +25,6 @@ public class MealController {
     private final MealService mealService;
     private final ModelMapper modelMapper;
     private final UserService userService;
-
 
 @Autowired
     public MealController(MealService mealService, ModelMapper modelMapper, UserService userService) {
