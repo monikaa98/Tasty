@@ -1,6 +1,5 @@
 package project.tastyfood.service;
 
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -14,8 +13,6 @@ import project.tastyfood.model.entity.Picture;
 import project.tastyfood.model.entity.Restaurant;
 import project.tastyfood.repository.PictureRepository;
 import project.tastyfood.repository.RestaurantRepository;
-
-
 
 import javax.transaction.Transactional;
 
