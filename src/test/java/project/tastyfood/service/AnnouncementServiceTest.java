@@ -18,7 +18,6 @@ import java.time.Instant;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class AnnouncementServiceTest {
-
     @Autowired
     private AnnouncementService announcementService;
     @Autowired
@@ -35,6 +34,7 @@ public class AnnouncementServiceTest {
         this.announcementRepository.save(announcement);
         Assertions.assertEquals(dbSize+1,this.announcementService.findAll().size());
     }
+    
     @Test
     public void testCreateOrUpdate(){
         long dbSize=this.announcementRepository.count();
@@ -46,6 +46,7 @@ public class AnnouncementServiceTest {
         this.announcementService.createOrUpdateAnnouncement(announcement);
         Assert.assertEquals(dbSize+1,this.announcementRepository.count());
     }
+    
     @Test
     public void testDelete(){
         this.announcementService.deleteAll();
