@@ -5,7 +5,6 @@ import org.hibernate.validator.constraints.Length;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
-
 @Entity
 @Table(name="towns")
 public class Town extends BaseEntity {
