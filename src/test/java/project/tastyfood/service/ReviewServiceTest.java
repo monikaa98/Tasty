@@ -47,13 +47,11 @@ public class ReviewServiceTest {
         Assert.assertEquals(dbCount + 1, this.reviewRepository.count());
     }
 
-
     @Test(expected = IllegalArgumentException.class)
     public void testAddReviewWhenNullThrow() throws Exception {
         reviewService.addReview(null, null);
         Mockito.verify(reviewRepository)
                 .save(any());
     }
-
 
 }
