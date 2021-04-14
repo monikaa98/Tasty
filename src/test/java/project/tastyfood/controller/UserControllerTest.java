@@ -29,9 +29,7 @@ import java.util.ArrayList;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @Transactional
-
 public class UserControllerTest {
-
     @Autowired
     private UserController userController;
     @Autowired
