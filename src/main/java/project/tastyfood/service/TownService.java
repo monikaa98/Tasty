@@ -12,5 +12,4 @@ public interface TownService {
     TownServiceModel findById(String id);
     void addTown(TownServiceModel townServiceModel, PictureServiceModel pictureServiceModel);
     List<TownViewModel>getAllTowns();
-
 }
