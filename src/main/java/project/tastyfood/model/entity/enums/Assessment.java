@@ -4,7 +4,7 @@ public enum Assessment {
     ONE(1), TWO(2), TREE(3), FOUR(4),
     FIVE(5),SIX(6),SEVEN(7),EIGHT(8),NINE(9),TEN(10);
     Assessment(int value) {
-  this.value=value;
+    this.value=value;
 }
 
 private int value;
