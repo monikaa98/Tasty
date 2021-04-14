@@ -21,7 +21,6 @@ import java.security.Principal;
 @WebAppConfiguration
 @Transactional
 public class StatsControllerTest {
-
     @Autowired
     private StatsController statsController;
     @Mock
