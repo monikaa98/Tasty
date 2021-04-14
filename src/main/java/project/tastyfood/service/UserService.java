@@ -25,16 +25,4 @@ public interface UserService {
     void createAdmin();
     boolean isRestaurateur(String email);
     boolean isUser(String email);
-
-
-
-
-
-
-
-
-
-
-
-
 }
