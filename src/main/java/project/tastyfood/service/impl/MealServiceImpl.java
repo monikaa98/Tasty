@@ -28,10 +28,6 @@ public class MealServiceImpl implements MealService {
     private final UserService userService;
     private final CategoryService categoryService;
 
-
-
-
-
 @Autowired
     public MealServiceImpl(MealRepository mealRepository, ModelMapper modelMapper, PictureService pictureService, RestaurantService restaurantService, UserService userService, CategoryService categoryService) {
         this.mealRepository = mealRepository;
@@ -40,9 +36,8 @@ public class MealServiceImpl implements MealService {
         this.restaurantService = restaurantService;
         this.userService = userService;
         this.categoryService = categoryService;
-
-
 }
+    
     @Override
     public void addMeal(MealServiceModel mealServiceModel, PictureServiceModel pictureServiceModel, String restaurantId) {
         Meal meal = this.modelMapper.map(mealServiceModel, Meal.class);
