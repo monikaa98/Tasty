@@ -15,7 +15,6 @@ import project.tastyfood.web.StatsController;
 import javax.transaction.Transactional;
 import java.security.Principal;
 
-
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
