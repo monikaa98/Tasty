@@ -9,7 +9,6 @@ import javax.persistence.*;
 public class Category extends BaseEntity {
     private CategoryName name;
 
-
     public Category() {
     }
 
@@ -25,6 +24,5 @@ public class Category extends BaseEntity {
     public void setName(CategoryName name) {
         this.name = name;
     }
-
 
 }
