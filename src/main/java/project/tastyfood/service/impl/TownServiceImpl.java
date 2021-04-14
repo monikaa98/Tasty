@@ -12,7 +12,6 @@ import project.tastyfood.repository.TownRepository;
 import project.tastyfood.service.PictureService;
 import project.tastyfood.service.TownService;
 
-
 import javax.persistence.EntityExistsException;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
