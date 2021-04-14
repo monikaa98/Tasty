@@ -1,7 +1,6 @@
 package project.tastyfood.model.service;
 
 
-
 public class TownServiceModel {
     private String id;
     private String name;
