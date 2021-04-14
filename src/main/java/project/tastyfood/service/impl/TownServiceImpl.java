@@ -30,7 +30,6 @@ public class TownServiceImpl implements TownService {
         this.townRepository = townRepository;
         this.modelMapper = modelMapper;
         this.pictureService = pictureService;
-
     }
 
     @Override
