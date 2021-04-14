@@ -63,7 +63,7 @@ public class MealServiceTest {
     }
 
     @Test
-   public void testAddMeal() throws IOException {
+    public void testAddMeal() throws IOException {
         Meal meal = new Meal() ;
            meal.setName("Meal");
            meal.setGrams(350);
