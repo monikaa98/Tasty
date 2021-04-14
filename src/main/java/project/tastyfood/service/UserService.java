@@ -1,6 +1,5 @@
 package project.tastyfood.service;
 
-
 import project.tastyfood.model.entity.Restaurant;
 import project.tastyfood.model.entity.UserEntity;
 import project.tastyfood.model.service.MealServiceModel;
