@@ -15,7 +15,6 @@ import project.tastyfood.model.service.UserServiceModel;
 import project.tastyfood.model.view.OrderViewModel;
 import project.tastyfood.repository.OrderRepository;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import javax.transaction.Transactional;
