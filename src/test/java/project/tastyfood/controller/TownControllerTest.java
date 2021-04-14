@@ -26,8 +26,6 @@ import javax.transaction.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @Transactional
-
-
 public class TownControllerTest {
     @Autowired
     private TownController townController;
@@ -39,7 +37,6 @@ public class TownControllerTest {
     private MultipartFile file;
     @Mock
     private RedirectAttributes redirectAttributes;
-
 
     @Test
     public void testAddTown(){
