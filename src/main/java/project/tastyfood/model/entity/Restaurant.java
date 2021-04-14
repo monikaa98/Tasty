@@ -5,7 +5,6 @@ import javax.persistence.*;
 import javax.transaction.Transactional;
 import javax.validation.constraints.NotBlank;
 
-
 @Entity
 @Table(name="restaurants")
 @Transactional
