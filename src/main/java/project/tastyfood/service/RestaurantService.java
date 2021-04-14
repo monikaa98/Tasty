@@ -11,12 +11,4 @@ public interface RestaurantService {
     RestaurantServiceModel findById(String id);
     List<RestaurantViewModel>getAllRestaurantsFromTownById(String id);
     RestaurantViewModel getRestaurantFromTownById(String id);
-
-
-
-
-
-
-
-
 }
