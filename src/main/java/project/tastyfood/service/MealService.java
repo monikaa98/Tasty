@@ -13,5 +13,4 @@ public interface MealService {
     MealServiceModel findById(String id);
     MealViewModel buyMeal(String id, String email);
     List<MealViewModel> findAllMealsByCategoryNameFromThatRestaurant(CategoryName categoryName,String restaurantId);
-
 }
